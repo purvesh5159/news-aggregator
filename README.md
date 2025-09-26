@@ -49,9 +49,9 @@ DB_DATABASE=news_aggregator
 DB_USERNAME=root
 DB_PASSWORD=
 
-NEWSAPI_KEY=your_newsapi_key
-GUARDIAN_KEY=your_guardian_key
-NYT_KEY=your_nyt_key
+NEWSAPI_KEY=45d9a2a4c276421185fdb6f442531ce7
+GUARDIAN_KEY=4ff1c7b7-f603-4715-9519-4bffd791e204
+NYT_KEY=bQCDa4RqaPrRIAbHph4Kv45MgDpE3Hri
 
 
 Run migrations:
