@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "05dc2188-ba40-414a-8341-c57d9166230f",
+		"name": "NewsAggregator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7414835",
+		"_collection_link": "https://cloudy-station-618953.postman.co/workspace/purvesh~1f7274e2-fa9e-40bf-83a5-ce12376f53e0/collection/7414835-05dc2188-ba40-414a-8341-c57d9166230f?action=share&source=collection_link&creator=7414835"
+	},
+	"item": [
+		{
+			"name": "Fetch Articles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/articles?q=ai&source=nyt&category=Business&date_from=2025-05-01&per_page=10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"articles"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "ai"
+						},
+						{
+							"key": "source",
+							"value": "nyt"
+						},
+						{
+							"key": "category",
+							"value": "Business"
+						},
+						{
+							"key": "date_from",
+							"value": "2025-05-01"
+						},
+						{
+							"key": "per_page",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Articles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/articles/55",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"articles",
+						"55"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Sources",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/sources",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"sources"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Preferences",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": 1,\n  \"sources\": [\"guardian\",\"nyt\"],\n  \"categories\": [\"technology\",\"science\"],\n  \"authors\": [\"Jane Doe\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/preferences",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"preferences"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
